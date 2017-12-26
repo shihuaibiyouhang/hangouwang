@@ -1,17 +1,18 @@
 <template>
-  <div class="hello">
- 
+  <div class="app-find">
+    发现
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'app-find',
   data () {
     return {
-      
+     
     }
   }
+  
 }
 </script>
 
