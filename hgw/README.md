@@ -1,6 +1,6 @@
 # hgw
 
-> 1718班的vue小项目，组员：肖军 王尘浩 徐悦
+> 1718班的vue小项目，组员：肖军 王尘浩 徐悦 afdasdsadsad
 王尘浩的分支
 
 ## Build Setup
