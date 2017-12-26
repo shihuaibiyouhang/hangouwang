@@ -1,6 +1,6 @@
 # hgw
 
-> 1718 wch xy xj vueproject
+> 1718班的vue小项目，组员：肖军 王尘浩 徐悦
 
 ## Build Setup
 
