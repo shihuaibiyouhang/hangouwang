@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <app-footer></app-footer>
     <router-view></router-view>
+    <app-footer v-if="$route.path=='/main'|| $route.path=='/find' || $route.path=='/myshop'"></app-footer>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import AppFooter from './components/footer/AppFooter'
 export default {
   name: 'app',
-  components:{AppFooter}
+  components:{AppFooter},
 }
 </script>
 
