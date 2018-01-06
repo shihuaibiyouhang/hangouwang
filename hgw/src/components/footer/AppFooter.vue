@@ -35,16 +35,19 @@ export default {
 
 
 <style lang="scss">
+.app-footer{
+   position: fixed;
+      bottom: 0;
+      width:375px;
   footer{
         height:0.52rem;
         background: rgba(85,85,85,0.95);
-        padding-bottom: 0.1rem;
-        bottom: 0;
-        font-size: 0.14em;
-        position: fixed;
+        padding-bottom: 0.1rem;   
+        font-size: 0.14em;    
         width: 100%;
         z-index: 6;
         ul{
+        width:100%;
           height:0.52rem;
           display: flex;
           justify-content: space-between;
@@ -68,5 +71,6 @@ export default {
             }
           };
         }
+  }
   }
 </style>
