@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <app-footer v-if="$route.path=='/main'|| $route.path=='/find' || $route.path=='/myshop'"></app-footer>
+    <app-footer v-if="$route.path=='/main'|| $route.path=='/find' || $route.path=='/myshop' || $route.path=='/goodsinformation'"></app-footer>
   </div>
 </template>
 

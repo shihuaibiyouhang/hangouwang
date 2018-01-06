@@ -34,7 +34,7 @@ export default {
   },
   methods:{
     turnout(name,id){
-        this.$router.push({ name: name, params: { Id: id }})
+        this.$router.push({name: name, query: {id: id}})  
       
     }
   }

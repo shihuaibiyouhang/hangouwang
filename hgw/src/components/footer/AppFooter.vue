@@ -1,13 +1,13 @@
 <template>
   <div class="app-footer">
-    <footer>
+    
         <ul>
           <li @click="turnout(nav.name)" v-for="nav in navs" :key = 'nav.id'>
             <i :class='nav.class'></i>
             <p>{{nav.content}}</p>
           </li>
         </ul>
-    </footer>
+    
   </div>
 </template>
 
@@ -35,13 +35,13 @@ export default {
 
 
 <style lang="scss">
-  footer{
+  .app-footer{
+        position: fixed;
+        bottom: 0;
         height:0.52rem;
         background: rgba(85,85,85,0.95);
         padding-bottom: 0.1rem;
-        bottom: 0;
         font-size: 0.14em;
-        position: fixed;
         width: 100%;
         z-index: 6;
         ul{

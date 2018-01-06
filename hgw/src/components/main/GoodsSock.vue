@@ -6,7 +6,7 @@
     </div>
     <ul>
       <li v-for="goods in goodsinfo_b" :key="goods.goods_id">
-        <div @click="turnout('goodsdetails')">
+        <div @click="turnout('goodsdetails',goods.goods_id)">
           <div class="goodspic">
             <img :src="goods.goods_image" alt="">
           </div>
@@ -33,8 +33,9 @@ export default {
     }
   },
   methods:{
-    turnout(name){
-      this.$router.push({name})
+    turnout(name,id){
+        this.$router.push({name: name, query: {id: id}})  
+      
     }
   }
   
