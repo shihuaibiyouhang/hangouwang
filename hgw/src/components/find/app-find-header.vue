@@ -7,7 +7,7 @@
     <div class="click-show">
       <span class="arrow"></span>
       <ul>
-        <li v-for="ref in refs"><a><i :class=ref.class></i>{{ref.title}}</a></li>
+        <li v-for="ref in refs" @click="to(ref.name)"><a><i :class=ref.class></i>{{ref.title}}</a></li>
     </ul>
     </div>
   </div>
@@ -21,17 +21,20 @@ export default {
     return {
      isShow:true,
      refs:[
-     {class:"fa fa-home",title:"首页"},
-     {class:"fa fa-search",title:"搜索"},
-     {class:"fa fa-car",title:"购物车"},
-     {class:"fa fa-user-o",title:"我的商城"},
-     {class:"fa fa-commenting-o",title:"消息"}]
+     {class:"fa fa-home",title:"首页",name:'main'},
+     {class:"fa fa-search",title:"搜索",name:'type'},
+     {class:"fa fa-car",title:"购物车",name:'car'},
+     {class:"fa fa-user-o",title:"我的商城",name:'myShop'},
+     {class:"fa fa-commenting-o",title:"消息",name:'Message'}]
     }
   },
   methods:{
   c:function(){
   this.isShow=!this.isShow;
-  console.log(this.isShow)
+  },
+  to:
+  (name){
+  this.$router.push(name)
   }
   }
 
@@ -76,7 +79,7 @@ h1{
 }
 .f-show{display:none}
 .click-show-f{
-  
+   z-index:-1;
     position: fixed;
     top: 0;
     right: 0;
