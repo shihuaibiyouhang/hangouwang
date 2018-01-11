@@ -9,6 +9,7 @@ import AppType from '../components/type/AppType.vue'
 import AppGoodsdetails from '../components/details/AppGoodsdetails.vue'
 import AppGoodsinformation from '../components/details/AppGoodsinformation.vue'
 import AppGoodscomment from '../components/details/AppGoodscomment.vue'
+import AppShopcar from '../components/shopcar/AppShopcar.vue'
 
 
 const routes = [
@@ -18,6 +19,7 @@ const routes = [
   {path:'/find',name:'find',component:AppFind},
   {path:'/myshop',name:'myshop',component:AppMyshop},
   {path:'/type',name:'type',component:AppType},  
+  {path:'/shopcar',name:'shopcar',component:AppShopcar},    
   {path:'/goodsdetails',name:'goodsdetails',component:AppGoodsdetails},  
   {path:'/goodsinformation',name:'goodsinformation',component:AppGoodsinformation},
   {path:'/goodscomment',name:'goodscomment',component:AppGoodscomment},  

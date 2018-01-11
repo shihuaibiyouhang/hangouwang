@@ -4,7 +4,7 @@
    <app-goodshead :getData="getData"></app-goodshead>   
    <app-goodsmain :goods_commend_list = "goods_commend_list" :goods_hair_info = "goods_hair_info" :goods_info = "goods_info" :store_info="store_info" :store_credit = "store_credit"></app-goodsmain>
    <app-goodsfooter></app-goodsfooter>
-   <app-goodstocar :goods_info="goods_info" :banner = "banner"></app-goodstocar>   
+   <app-goodstocar :goods_info="goods_info" :banner = "banner" :goods_id = "goods_id"></app-goodstocar>   
   </div>
 </template>
 
@@ -24,7 +24,8 @@ export default {
      goods_hair_info:[],
      goods_info:[],
      store_info:[],
-     store_credit:[]
+     store_credit:[],
+     goods_id:this.$route.query.id
     }
   },
   methods:{
@@ -35,7 +36,7 @@ export default {
               params:{goods_id:this.$route.query.id}
           }).then((response)=>{
             that.banner = response.data.datas.goods_image.split(',')
-            console.log(that.banner[0])
+            console.log(response.data.datas)
             this.goods_commend_list = response.data.datas.goods_commend_list
             this.goods_hair_info = response.data.datas.goods_hair_info
             this.goods_info = response.data.datas.goods_info

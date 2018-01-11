@@ -39,13 +39,13 @@
                     <i></i>
                     <p>客服</p>
                 </a> 
-                <a class="cart">
+                <a class="cart" @click = "turnout('shopcar')">
                     <i></i>
                     <p>购物车</p>
                 </a>
             </div>
             <div class="buy-handle ">
-                <a  class="add-cart" id="add-cart">加入购物车</a>
+                <a  class="add-cart" id="add-cart" @click="addGood({id:goods_id,price:goods_info.goods_price,title:goods_info.goods_name,pic:banner[0]})">加入购物车</a>
                 <a class="buy-now" id="buy-now">立即购买</a>
             </div>
         </div></div></div>
@@ -55,8 +55,10 @@
 import { mapMutations } from 'vuex'
 import { mapState } from 'vuex'
 import {mapGetters} from 'vuex'
+import {mapActions} from 'vuex'
+
 export default {
-  props:['goods_info','banner'],
+  props:['goods_info','banner','goods_id'],
   name: 'app-goodstocar',
   data () {
     return {
@@ -75,7 +77,11 @@ export default {
       ...mapGetters([])
   },
   methods:{
-    ...mapMutations(['increment','decrease','isShow'])
+    ...mapMutations(['increment','decrease','isShow']),
+    ...mapActions(['addGood']),
+    turnout(name){
+        this.$router.push({name: name})  
+    },
   },
   
 }
