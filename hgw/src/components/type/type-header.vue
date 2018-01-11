@@ -3,7 +3,7 @@
     <div class="type-header-l"><a href="javascript:history.go(-1)"><i class="fa fa-angle-left"></i></a></div>
       <div class="type-header-c"><i class="fa fa-search"></i><span class="search-input" id="keyword">请输入关键字</span></div>
         <div class="type-header-r">
-        <router-link to='/appGoodCar' class="a"><i class="fa fa-ellipsis-h"></i></router-link></div>
+        <router-link to='/AppSearch' class="a"><i class="fa fa-ellipsis-h"></i></router-link></div>
   </div>
 </template>
 
@@ -42,13 +42,15 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    .a{
+    a{
     position: relative;
     z-index: 1;
     display: inline-block;
     width: .2rem;
     height: .2rem;
     padding: 0.1rem;
+    font-size:.17rem;
+    color:#333;
     i{
    font-size:.25rem;
    font-weight:bold;

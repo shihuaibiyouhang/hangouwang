@@ -7,7 +7,7 @@ import AppFind from '../components/find/AppFind.vue'
 import AppMyshop from '../components/myshop/AppMyshop.vue'
 import AppType from '../components/type/AppType.vue'
 import appGoodCar from '../components/car/appGoodCar.vue'
-
+import AppSearch from '../components/search/App-search.vue'
 
 const routes = [
   
@@ -17,7 +17,8 @@ const routes = [
   {path:'/myshop',name:'myshop',component:AppMyshop},
   {path:'/type',name:'type',component:AppType},  
    {path:"/appGoodCar",component:appGoodCar},
-  {path:'**',redirect: '/main'},
+   {path:"/AppSearch",component:AppSearch},
+ 
  
   
 ]

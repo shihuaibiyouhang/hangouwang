@@ -1,6 +1,6 @@
 <template>
   <div class="app-find-header">
-  <a class="h-return" href="javascript:history.go(-1)">返回</a>
+  <a class="h-return" href="javascript:history.go(-1)"><i class="fa fa-angle-left"></i></a>
   <h1>发现</h1>
   <div class="header-r" @click="c"><a class="h-more" >. . .</a></div>
   <div class="click-show-f" :class="{'f-show':isShow}">
@@ -58,6 +58,8 @@ export default {
 .h-return{
 	height:0.179rem;
 	font-size:0.186rem;
+  color:#333;
+  font-size:.24rem;
 }
 .header-r{
 

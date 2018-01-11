@@ -4,6 +4,7 @@
   <appFindBanner></appFindBanner>
    <appFindSelect></appFindSelect>
    <appFindBox :info='url' v-for="(url,i) in urls" :key="i"></appFindBox>
+    <MainFooter></MainFooter>
   <AppFooter></AppFooter>
   </div>
   
@@ -21,7 +22,7 @@ export default {
   },
   components:{
   appFindHeader,appFindBanner,appFindSelect,
-  appFindBox,AppFooter},
+  appFindBox,AppFooter,MainFooter},
  
   
 }
@@ -31,6 +32,7 @@ import appFindHeader from './app-find-header'
 import appFindSelect from './app-find-select'
 import appFindBox from './app-find-box'
 import axios from 'axios'
+import MainFooter from '../main/MainFooter'
 
 </script>
 
