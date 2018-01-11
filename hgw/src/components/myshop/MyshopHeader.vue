@@ -10,12 +10,14 @@
 				</div>
 			</div>
 			
-			<div class="login-logo">
+			<div class="login-logo" @click="toLogin('login')">
 				<div class="logo">
-					<i class="fa fa-user-circle-o"></i>
+					<img src='http://img5.imgtn.bdimg.com/it/u=1868800165,2827271018&fm=27&gp=0.jpg' width="60px" height="60px" v-if="!isShow"/>
+					<i class="fa fa-user-circle-o" v-if="isShow"></i>
 					
 				</div>
-				<div class="text">点击登录</div>
+				<div class="text" v-if="isShow">点击登录</div>
+				<div class="text" else>{{user_info.userName}}</div>
 			</div>
 			
 			<div class="login-nav">
@@ -39,8 +41,17 @@
 </template>
 
 <script>
+	import {mapState} from 'vuex'
 	export default{
-		name:'myshop-login'
+		name:'myshop-login',
+		computed:
+			mapState(['user_info','isShow']),
+		
+		methods:{
+			toLogin(name){
+				this.$router.push({name})
+			}
+		}
 	}
 </script>
 
@@ -48,7 +59,7 @@
 	.login-top{
 		width:100%;
 		height:2.42rem;
-		background:url(http://img3.imgtn.bdimg.com/it/u=895030949,295914694&fm=200&gp=0.jpg) no-repeat;
+		background:url(http://img2.imgtn.bdimg.com/it/u=3746386826,2651228206&fm=200&gp=0.jpg) no-repeat;
 		.login-header{
 			height:0.43rem;
 			/*background:rgba(0,0,0,0.1);*/
@@ -68,7 +79,8 @@
 			align-items: center;
 			.logo{
 				font-size:0.88rem;
-				color:darkgray;
+				color:gainsboro;
+				font-weight:100;
 			}
 			.text{
 				font-size:0.2rem;

@@ -2,10 +2,10 @@
 	<div class="myshop-end">
 		<div class="end-nav">
 			<ul>
-				<li>登录</li>
-				<li>注册</li>
+				<li @click="toLogin('login')">登录</li>
+				<li @click="toRegister('register')">注册</li>
 				<li>反馈</li>
-				<li>返回顶部</li>
+				<li v-on:click="toTop">返回顶部</li>
 			</ul>
 		</div>
 		<div class="end-pic">
@@ -32,7 +32,23 @@
 
 <script>
 	export default{
-		name:'myshop-end'
+		name:'myshop-end',
+		methods:{
+			
+			toTop(){
+				var top=document.body.scrollTop||document.documentElement.scrollTop;
+				if(top>20){
+				document.documentElement.scrollTop = 0
+				}
+			},
+			toLogin(name){
+				this.$router.push({name})
+			},
+			toRegister(name){
+				this.$router.push({name})
+			}
+		}
+		
 	}
 </script>
 
@@ -40,6 +56,7 @@
 	.myshop-end{
 		height:1.67rem;
 		background:#fff;
+		margin-bottom:0.05rem;
 		.end-nav{
 			height:0.4rem;
 			border-bottom:1px solid #ccc;
