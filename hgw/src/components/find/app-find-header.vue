@@ -29,16 +29,14 @@ export default {
     }
   },
   methods:{
-  c:function(){
-  this.isShow=!this.isShow;
+    c:function(){
+      this.isShow=!this.isShow;
   },
-  to:
-  (name){
-  this.$router.push(name)
-  }
-  }
+    to:function(name){
+        this.$router.push(name)
+    }
 
-  
+  }
 }
 </script>
 
